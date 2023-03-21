@@ -35,6 +35,24 @@ const JobDetails = () => {
 
   const onRefresh = () => {};
 
+  const displayTabContent = () => {
+    switch (activeTab) {
+      case "Qualifications":
+        return (
+          <Specifics
+            title="Qualifications"
+            points={data[0].job_highlights?.Qualifications ?? ["N/A"]}
+          />
+        );
+      case "Responsabilities":
+        return <Specifics data={data[0]} />;
+      case "Benefits":
+        return <Specifics data={data[0]} />;
+      default:
+        break;
+    }
+  };
+
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.lightWhite }}>
       <Stack.Screen
@@ -82,6 +100,8 @@ const JobDetails = () => {
                 activeTab={activeTab}
                 setActiveTab={setActiveTab}
               />
+
+              {displayTabContent()}
             </View>
           )}
         </ScrollView>
