@@ -8,17 +8,19 @@ import {
   FlatList,
 } from "react-native";
 import NearbyJobCard from "../../common/cards/nearby/NearbyJobCard";
-import useFetchData from "../../../hook/fetchDatafromJson";
-import dataJson from "../../../data/data.json";
 
-import { COLORS, SIZES } from "../../../constants";
+import { COLORS } from "../../../constants";
 
 import styles from "./nearbyjobs.style";
+import useFetch from "../../../hook/useFetch";
 
 const Nearbyjobs = () => {
   const router = useRouter();
-  const data = dataJson.data;
-  const { isLoading, error } = useFetchData();
+  const { data, isLoading, error } = useFetch("search", {
+    query: "React developer",
+    num_pages: "1",
+    radius: "20",
+  });
 
   const handleCardPress = (item) => {
     router.push(`/job-details/${item.job_id}`);

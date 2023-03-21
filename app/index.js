@@ -4,8 +4,8 @@ import { View, ScrollView, SafeAreaView } from "react-native";
 
 import { COLORS, icons, images, SIZES } from "../constants";
 import {
-  Nearbyjobs,
   Popularjobs,
+  Nearbyjobs,
   ScreenHeaderBtn,
   Welcome,
 } from "../components";
