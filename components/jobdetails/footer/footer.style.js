@@ -5,10 +5,10 @@ import { COLORS, FONT, SIZES } from "../../../constants";
 const styles = StyleSheet.create({
   container: {
     position: "absolute",
-    bottom: 10,
+    bottom: 0,
     left: 0,
     right: 0,
-    padding: SIZES.small,
+    padding: SIZES.medium,
     backgroundColor: "#FFF",
     justifyContent: "space-between",
     alignItems: "center",
@@ -22,6 +22,7 @@ const styles = StyleSheet.create({
     borderRadius: SIZES.medium,
     justifyContent: "center",
     alignItems: "center",
+    marginBottom: 10,
   },
   likeBtnImage: {
     width: "40%",
@@ -36,6 +37,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     marginLeft: SIZES.medium,
     borderRadius: SIZES.medium,
+    marginBottom: 10,
   },
   applyBtnText: {
     fontSize: SIZES.medium,
