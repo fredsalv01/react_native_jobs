@@ -15,9 +15,8 @@ import { COLORS, icons, SIZES } from "../../../constants";
 const jobTypes = [
   "Full Time",
   "Part Time",
-  "Internship",
-  "Freelance",
-  "Contract",
+  "Intern",
+  "Contractor",
 ];
 
 const Welcome = ({ searchTerm, setSearchTerm, handleClick }) => {
