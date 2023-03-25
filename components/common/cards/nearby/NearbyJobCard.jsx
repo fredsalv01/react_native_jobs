@@ -24,11 +24,14 @@ class NearbyJobCard extends PureComponent {
         </TouchableOpacity>
 
         <View style={styles.textContainer}>
+          <Text style={styles.jobType}>
+            {this.props.job.employer_name}
+          </Text>
           <Text style={styles.jobName} numberOfLines={1}>
             {this.props.job.job_title}
           </Text>
           <Text style={styles.jobType}>
-            {this.props.job.job_employment_type}
+            {this.props.job.job_country} {this.props.job.job_city !== null &&  (this.props.job.job_city)}
           </Text>
         </View>
       </TouchableOpacity>
